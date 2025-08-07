@@ -28,6 +28,11 @@
             <li class="icon"><a href="#"><i class="fa-brands fa-twitter"></i></a></i></li>
             <!-- <li><a href="mobile-menu"><i class="fa-solid fa-bars"></i></a></li> -->
         </ul> 
+       <button class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
        
     <!-- <span class="mobile-menu"><i class="fa-solid fa-bars"></i></span>  -->
     
@@ -514,7 +519,24 @@
         </div>
     </footer>
 
-    <script src="https://kit.fontawesome.com/ec4753e393.js" crossorigin="anonymous"></script> 
+ 
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    
+    // Close menu when clicking on a link
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
 </body>
 
 </html>
