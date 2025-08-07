@@ -1002,3 +1002,243 @@
 
 
   /* Media Query  */
+/* Media Queries */
+@media (max-width: 1200px) {
+    .intro .content .text p {
+        width: 90%;
+    }
+    
+    .services .service-list-container,
+    .call_me,
+    .projects,
+    .team,
+    .about {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    
+    .projects .project-list-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .home h1 {
+        font-size: 3rem;
+    }
+    
+    .home p {
+        width: 70%;
+    }
+    
+    .intro .content {
+        flex-direction: column;
+    }
+    
+    .intro .content .text,
+    .intro .content .image-container {
+        width: 100%;
+    }
+    
+    .sub-intro2>div {
+        width: 45%;
+        margin-bottom: 2rem;
+    }
+    
+    .services .service-list-container {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .services .service-item {
+        width: 45%;
+    }
+    
+    .call_me {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .call_me .content,
+    .call_me .form {
+        width: 100%;
+    }
+    
+    .projects .project-list-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team .team-member-list-container {
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+    
+    .team .team-member-item {
+        width: 30%;
+    }
+    
+    .about {
+        flex-direction: column;
+    }
+    
+    .about > img,
+    .about > .content {
+        width: 100%;
+    }
+    
+    .footer-list-container {
+        flex-wrap: wrap;
+    }
+    
+    .footer-list-container .footer-list-item.wide {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem;
+    }
+    
+    nav ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--dark-green-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transition: left 0.3s ease-in-out;
+    }
+    
+    nav ul.active {
+        left: 0;
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 101;
+    }
+    
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--white-color);
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .hamburger span:nth-child(1) {
+        top: 0;
+    }
+    
+    .hamburger span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .hamburger span:nth-child(3) {
+        bottom: 0;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
+    
+    .home h1 {
+        font-size: 2.5rem;
+    }
+    
+    .home p {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+    
+    .services .service-item {
+        width: 100%;
+    }
+    
+    .services .propositions {
+        flex-direction: column;
+    }
+    
+    .services .propositions img,
+    .services .propositions .content {
+        width: 100%;
+    }
+    
+    .projects .project-list-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .team .team-member-item {
+        width: 45%;
+    }
+    
+    .contact-form, .contact-details {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-list-container .footer-list-item.wide {
+        width: 100%;
+    }
+    
+    footer .footer-list-container p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .home h1 {
+        font-size: 2rem;
+    }
+    
+    .home p {
+        font-size: 1rem;
+        width: 90%;
+    }
+    
+    button {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.65rem;
+    }
+    
+    .sub-intro2>div {
+        width: 100%;
+    }
+    
+    .team .team-member-item {
+        width: 100%;
+    }
+    
+    .about .content .stat-list-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .about .content .stat-list-container .stat-item {
+        width: 100%;
+    }
+}
+
